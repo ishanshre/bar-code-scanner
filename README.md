@@ -1,2 +1,1 @@
-# bar-code-scanner
-A bar code scanner using django and react native
+# A simple event app with django rest framework and react native
