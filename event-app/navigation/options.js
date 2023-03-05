@@ -15,7 +15,8 @@ export const navOptions = (nav) => {
             ></Ionicons>
         ),
         headerLeft: () => (
-            <Text style={{color:'white', fontSize:20, paddingLeft: 5}}>Logo</Text>
+            <Ionicons name="home" size={22} color="white" paddingRight={5}/>
+            
         )
     }
 }

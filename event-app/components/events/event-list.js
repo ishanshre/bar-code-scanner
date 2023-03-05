@@ -1,15 +1,14 @@
 import { FlatList, RefreshControl, Text, View } from "react-native"
 import { DUMMY_DATA } from "../../data/dummy";
 import EventItem from "./event-item";
-const EventList = () => {
+const EventList = ({data}) => {
     const renderItem = ({item}) => {
-        return <EventItem id={item.id} title={item.title} body={item.body} />
+        return <EventItem id={item.id} name={item.name} body={item.body} qrCode={item.qr_code}/>
     }
     return (
         <View>
-            <Text>Event List</Text>
             <FlatList 
-                data={DUMMY_DATA}
+                data={data}
                 keyExtractor={item=> item.id}
                 renderItem={renderItem}
                 refreshControl= {
@@ -19,6 +18,7 @@ const EventList = () => {
                     />
                 }
             />
+            
         </View>
     );
 }
