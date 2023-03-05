@@ -18,14 +18,16 @@ const EventDetailScreen = () => {
                 />
             ),
         })
-    })
+    }, [])
     return (
         <View style={styles.screen}>
-            <Text style={{fontSize:40}}>Event Detail {eventId}</Text>
-            <Text style={{fontSize:30}}>{title}</Text>
-            <Text style={{fontSize:20}}>{body}</Text>
+            <View>
+                <Text style={{fontSize:40}}>Event Detail {eventId}</Text>
+                <Text style={{fontSize:30}}>{title}</Text>
+                <Text style={{fontSize:20}}>{body}</Text>
+            </View>
             <Image 
-                style={{width:100, height:100}}
+                style={{width:200, height:200, margin: 40}}
                 source={{ uri: qrCode }}
             />
 
@@ -35,7 +37,8 @@ const EventDetailScreen = () => {
 
 const styles = StyleSheet.create({
     screen: {
-        padding: 20
+        padding: 30,
+        
     }
 })
 export default EventDetailScreen;

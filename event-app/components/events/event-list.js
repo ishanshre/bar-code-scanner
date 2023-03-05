@@ -1,7 +1,7 @@
 import { FlatList, RefreshControl, Text, View } from "react-native"
 import { DUMMY_DATA } from "../../data/dummy";
 import EventItem from "./event-item";
-const EventList = ({data}) => {
+const EventList = ({data, onRefresh}) => {
     const renderItem = ({item}) => {
         return <EventItem id={item.id} name={item.name} body={item.body} qrCode={item.qr_code}/>
     }
@@ -14,7 +14,7 @@ const EventList = ({data}) => {
                 refreshControl= {
                     <RefreshControl 
                         refreshing={false}
-                        onRefresh={()=>console.log('refreshing...')}
+                        onRefresh={onRefresh}
                     />
                 }
             />
